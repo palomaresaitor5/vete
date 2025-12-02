@@ -1,6 +1,5 @@
 import { ArticleCard } from "@/components/shared/ArticleCard";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import articlesData from "@/data/articles.json";
 
@@ -23,10 +22,10 @@ export function FeaturedReviews() {
             </p>
           </div>
           <Button asChild variant="outline" className="mt-4 md:mt-0">
-            <Link to="/articulos">
+            <a href="/articulos">
               Ver todos
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </Button>
         </div>
 

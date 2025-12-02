@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { AppProviders } from "../react-pages/AppProviders";
+import ArticlesPage from "../react-pages/ArticlesPage";
+---
+<BaseLayout title="Reviews de comida para mascotas | PetFood Expert">
+  <AppProviders client:load>
+    <ArticlesPage />
+  </AppProviders>
+</BaseLayout>

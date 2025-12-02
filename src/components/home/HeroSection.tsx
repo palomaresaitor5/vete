@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { PawPrint, ArrowRight, Star } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -65,15 +64,15 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild size="xl" variant="accent">
-              <Link to="/articulos">
+              <a href="/articulos">
                 Ver Reviews
                 <ArrowRight className="h-5 w-5" />
-              </Link>
+              </a>
             </Button>
             <Button asChild size="xl" variant="hero-outline">
-              <Link to="/razas">
+              <a href="/razas">
                 Explorar Razas
-              </Link>
+              </a>
             </Button>
           </motion.div>
 

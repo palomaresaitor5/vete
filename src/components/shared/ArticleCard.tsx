@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Clock, ArrowRight } from "lucide-react";
 import { RatingStars } from "./RatingStars";
 import { PetTypeBadge } from "./PetTypeBadge";
@@ -29,7 +28,7 @@ export function ArticleCard({ article, index = 0 }: ArticleCardProps) {
       transition={{ delay: index * 0.1 }}
       className="group"
     >
-      <Link to={`/articulo/${article.slug}`}>
+      <a href={`/articulo/${article.slug}`}>
         <div className="bg-card rounded-2xl overflow-hidden card-hover border border-border">
           {/* Image Section */}
           <div className="relative h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
@@ -70,7 +69,7 @@ export function ArticleCard({ article, index = 0 }: ArticleCardProps) {
             </span>
           </div>
         </div>
-      </Link>
+      </a>
     </motion.article>
   );
 }

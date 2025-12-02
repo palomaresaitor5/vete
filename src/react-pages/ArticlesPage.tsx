@@ -15,7 +15,7 @@ const ArticlesPage = () => {
     : articlesData.filter(a => a.petType === filter);
 
   return (
-    <Layout>
+    <Layout currentPath="/articulos">
       {/* Header */}
       <section className="bg-gradient-to-b from-secondary/50 to-background py-12">
         <div className="container">

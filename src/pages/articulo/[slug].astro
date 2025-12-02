@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { AppProviders } from "../../react-pages/AppProviders";
+import ArticleDetailPage from "../../react-pages/ArticleDetailPage";
+import NotFound from "../../react-pages/NotFound";
+import articles from "../../data/articles.json";
+import brands from "../../data/brands.json";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return articles.map((article) => ({ params: { slug: article.slug } }));
+}
+
+const { slug } = Astro.params;
+const article = articles.find((item) => item.slug === slug);
+const brand = article ? brands.find((item) => item.id === article.brandId) : undefined;
+const pageTitle = article ? `${article.title} | PetFood Expert` : "Artículo no encontrado";
+---
+<BaseLayout title={pageTitle}>
+  {article ? (
+    <AppProviders client:load>
+      <ArticleDetailPage article={article} brand={brand} />
+    </AppProviders>
+  ) : (
+    <AppProviders client:load>
+      <NotFound path={Astro.url.pathname} />
+    </AppProviders>
+  )}
+</BaseLayout>

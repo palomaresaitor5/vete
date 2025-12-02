@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Dumbbell, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -29,7 +28,7 @@ export function BreedCard({ breed, type, index = 0 }: BreedCardProps) {
       transition={{ delay: index * 0.1 }}
       className="group"
     >
-      <Link to={`/raza/${type}/${breed.id}`}>
+      <a href={`/raza/${type}/${breed.id}`}>
         <div className="bg-card rounded-2xl overflow-hidden card-hover border border-border">
           {/* Image */}
           <div className={cn(
@@ -75,7 +74,7 @@ export function BreedCard({ breed, type, index = 0 }: BreedCardProps) {
             </div>
           </div>
         </div>
-      </Link>
+      </a>
     </motion.article>
   );
 }

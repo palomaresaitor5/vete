@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { AppProviders } from "../react-pages/AppProviders";
+import BrandsPage from "../react-pages/BrandsPage";
+---
+<BaseLayout title="Marcas analizadas | PetFood Expert">
+  <AppProviders client:load>
+    <BrandsPage />
+  </AppProviders>
+</BaseLayout>

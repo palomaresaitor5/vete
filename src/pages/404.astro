@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { AppProviders } from "../react-pages/AppProviders";
+import NotFound from "../react-pages/NotFound";
+---
+<BaseLayout title="Página no encontrada">
+  <AppProviders client:load>
+    <NotFound path={Astro.url.pathname} />
+  </AppProviders>
+</BaseLayout>

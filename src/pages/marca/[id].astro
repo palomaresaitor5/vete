@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { AppProviders } from "../../react-pages/AppProviders";
+import BrandDetailPage from "../../react-pages/BrandDetailPage";
+import NotFound from "../../react-pages/NotFound";
+import brands from "../../data/brands.json";
+import articles from "../../data/articles.json";
+
+export function getStaticPaths() {
+  return brands.map((brand) => ({ params: { id: brand.id } }));
+}
+
+const { id } = Astro.params;
+const brand = brands.find((item) => item.id === id);
+const brandArticles = articles.filter((article) => article.brandId === id);
+const pageTitle = brand ? `${brand.name} | Marcas de comida para mascotas` : "Marca no encontrada";
+---
+<BaseLayout title={pageTitle}>
+  {brand ? (
+    <AppProviders client:load>
+      <BrandDetailPage brand={brand} brandArticles={brandArticles} />
+    </AppProviders>
+  ) : (
+    <AppProviders client:load>
+      <NotFound path={Astro.url.pathname} />
+    </AppProviders>
+  )}
+</BaseLayout>

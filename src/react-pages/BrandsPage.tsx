@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const BrandsPage = () => {
   return (
-    <Layout>
+    <Layout currentPath="/marcas">
       {/* Header */}
       <section className="bg-gradient-to-b from-secondary/50 to-background py-12">
         <div className="container">

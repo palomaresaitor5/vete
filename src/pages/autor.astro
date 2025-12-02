@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { AppProviders } from "../react-pages/AppProviders";
+import AuthorPage from "../react-pages/AuthorPage";
+---
+<BaseLayout title="Sobre el autor | PetFood Expert">
+  <AppProviders client:load>
+    <AuthorPage />
+  </AppProviders>
+</BaseLayout>

@@ -1,4 +1,3 @@
-import { useParams, Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { RatingStars } from "@/components/shared/RatingStars";
 import { PetTypeBadge } from "@/components/shared/PetTypeBadge";
@@ -17,24 +16,26 @@ import articlesData from "@/data/articles.json";
 import brandsData from "@/data/brands.json";
 import { motion } from "framer-motion";
 
-const ArticleDetailPage = () => {
-  const { slug } = useParams();
-  const article = articlesData.find(a => a.slug === slug);
+interface ArticleDetailPageProps {
+  article?: (typeof articlesData)[number];
+  brand?: (typeof brandsData)[number];
+}
+
+const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
+  const brandInfo = article ? brand ?? brandsData.find((b) => b.id === article.brandId) : undefined;
 
   if (!article) {
     return (
-      <Layout>
+      <Layout currentPath="/articulos">
         <div className="container py-20 text-center">
           <h1 className="text-2xl font-bold mb-4">Artículo no encontrado</h1>
           <Button asChild>
-            <Link to="/articulos">Volver a reviews</Link>
+            <a href="/articulos">Volver a reviews</a>
           </Button>
         </div>
       </Layout>
     );
   }
-
-  const brand = brandsData.find(b => b.id === article.brandId);
 
   const scoreDescriptions = {
     ingredients: "Calidad y origen de los ingredientes utilizados en la fórmula.",
@@ -44,16 +45,16 @@ const ArticleDetailPage = () => {
   };
 
   return (
-    <Layout>
+    <Layout currentPath="/articulos">
       {/* Hero Header */}
       <section className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-8 overflow-hidden">
         <div className="absolute inset-0 paw-pattern opacity-30" />
         <div className="container relative">
           <Button asChild variant="ghost" className="mb-6">
-            <Link to="/articulos">
+            <a href="/articulos">
               <ArrowLeft className="h-4 w-4" />
               Volver a reviews
-            </Link>
+            </a>
           </Button>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -89,14 +90,14 @@ const ArticleDetailPage = () => {
                   <Clock className="h-4 w-4" />
                   {article.readTime} min de lectura
                 </span>
-                {brand && (
-                  <Link 
-                    to={`/marca/${brand.id}`}
+                {brandInfo && (
+                  <a
+                    href={`/marca/${brandInfo.id}`}
                     className="flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full hover:bg-primary/20 transition-colors"
                   >
-                    <span>{brand.logo}</span>
-                    {brand.name}
-                  </Link>
+                    <span>{brandInfo.logo}</span>
+                    {brandInfo.name}
+                  </a>
                 )}
               </div>
             </motion.div>
@@ -506,13 +507,13 @@ const ArticleDetailPage = () => {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild size="lg">
-                  <Link to="/articulos">Ver más reviews</Link>
+                  <a href="/articulos">Ver más reviews</a>
                 </Button>
-                {brand && (
+                {brandInfo && (
                   <Button asChild variant="outline" size="lg">
-                    <Link to={`/marca/${brand.id}`}>
-                      Ver más de {brand.name}
-                    </Link>
+                    <a href={`/marca/${brandInfo.id}`}>
+                      Ver más de {brandInfo.name}
+                    </a>
                   </Button>
                 )}
               </div>

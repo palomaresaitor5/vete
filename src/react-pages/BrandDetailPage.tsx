@@ -1,4 +1,3 @@
-import { useParams, Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { RatingStars } from "@/components/shared/RatingStars";
 import { ArticleCard } from "@/components/shared/ArticleCard";
@@ -8,18 +7,24 @@ import brandsData from "@/data/brands.json";
 import articlesData from "@/data/articles.json";
 import { motion } from "framer-motion";
 
-const BrandDetailPage = () => {
-  const { id } = useParams();
-  const brand = brandsData.find(b => b.id === id);
-  const brandArticles = articlesData.filter(a => a.brandId === id);
+interface BrandDetailPageProps {
+  brand?: (typeof brandsData)[number];
+  brandArticles?: typeof articlesData;
+}
+
+const BrandDetailPage = ({
+  brand,
+  brandArticles = [],
+}: BrandDetailPageProps) => {
+  const articles = brand ? brandArticles.filter((a) => a.brandId === brand.id) : [];
 
   if (!brand) {
     return (
-      <Layout>
+      <Layout currentPath="/marcas">
         <div className="container py-20 text-center">
           <h1 className="text-2xl font-bold mb-4">Marca no encontrada</h1>
           <Button asChild>
-            <Link to="/marcas">Volver a marcas</Link>
+            <a href="/marcas">Volver a marcas</a>
           </Button>
         </div>
       </Layout>
@@ -27,15 +32,15 @@ const BrandDetailPage = () => {
   }
 
   return (
-    <Layout>
+    <Layout currentPath="/marcas">
       {/* Header */}
       <section className="bg-gradient-to-b from-secondary/50 to-background py-12">
         <div className="container">
           <Button asChild variant="ghost" className="mb-6">
-            <Link to="/marcas">
+            <a href="/marcas">
               <ArrowLeft className="h-4 w-4" />
               Volver a marcas
-            </Link>
+            </a>
           </Button>
 
           <motion.div
@@ -85,7 +90,7 @@ const BrandDetailPage = () => {
               
               <div className="flex gap-2 mt-4 pt-4 border-t border-border">
                 {brand.petTypes.map(type => (
-                  <span 
+                  <span
                     key={type}
                     className="text-xs px-2 py-1 rounded-full bg-secondary"
                   >
@@ -105,11 +110,11 @@ const BrandDetailPage = () => {
             Reviews de {brand.name}
           </h2>
           
-          {brandArticles.length > 0 ? (
+          {articles.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {brandArticles.map((article, index) => (
-                <ArticleCard 
-                  key={article.id} 
+              {articles.map((article, index) => (
+                <ArticleCard
+                  key={article.id}
                   article={article as any} 
                   index={index} 
                 />

@@ -1,4 +1,3 @@
-import { useParams, Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Heart, Scale, Clock, MapPin, Dumbbell, Sparkles, AlertTriangle, Utensils } from "lucide-react";
@@ -7,19 +6,21 @@ import brandsData from "@/data/brands.json";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const BreedDetailPage = () => {
-  const { type, id } = useParams();
+interface BreedDetailPageProps {
+  breed?: (typeof breedsData.dogs)[number] | (typeof breedsData.cats)[number];
+  type: "dog" | "cat";
+}
+
+const BreedDetailPage = ({ breed, type }: BreedDetailPageProps) => {
   const isDog = type === "dog";
-  const breeds = isDog ? breedsData.dogs : breedsData.cats;
-  const breed = breeds.find(b => b.id === id);
 
   if (!breed) {
     return (
-      <Layout>
+      <Layout currentPath="/razas">
         <div className="container py-20 text-center">
           <h1 className="text-2xl font-bold mb-4">Raza no encontrada</h1>
           <Button asChild>
-            <Link to="/razas">Volver a razas</Link>
+            <a href="/razas">Volver a razas</a>
           </Button>
         </div>
       </Layout>
@@ -28,10 +29,10 @@ const BreedDetailPage = () => {
 
   const recommendedBrands = breed.recommendedFood
     .map(foodId => brandsData.find(b => b.id === foodId))
-    .filter(Boolean);
+    .filter(Boolean) as (typeof brandsData)[number][];
 
   return (
-    <Layout>
+    <Layout currentPath="/razas">
       {/* Header */}
       <section className={cn(
         "py-12",
@@ -41,10 +42,10 @@ const BreedDetailPage = () => {
       )}>
         <div className="container">
           <Button asChild variant="ghost" className="mb-6">
-            <Link to="/razas">
+            <a href="/razas">
               <ArrowLeft className="h-4 w-4" />
               Volver a razas
-            </Link>
+            </a>
           </Button>
 
           <motion.div
@@ -190,9 +191,9 @@ const BreedDetailPage = () => {
                 </h3>
                 <div className="space-y-3">
                   {recommendedBrands.map(brand => brand && (
-                    <Link
+                    <a
                       key={brand.id}
-                      to={`/marca/${brand.id}`}
+                      href={`/marca/${brand.id}`}
                       className="flex items-center gap-3 p-3 rounded-xl hover:bg-secondary transition-colors group"
                     >
                       <span className="text-2xl">{brand.logo}</span>
@@ -206,14 +207,14 @@ const BreedDetailPage = () => {
                         <span className="text-rating-star">★</span>
                         <span>{brand.rating}</span>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
-                
+
                 <Button asChild className="w-full mt-4">
-                  <Link to="/articulos">
+                  <a href="/articulos">
                     Ver todos los reviews
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </motion.div>

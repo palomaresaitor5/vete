@@ -7,7 +7,7 @@ import { BreedsPreview } from "@/components/home/BreedsPreview";
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout currentPath="/">
       <HeroSection />
       <FeaturedReviews />
       <BrandsShowcase />

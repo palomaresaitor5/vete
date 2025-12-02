@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import brandsData from "@/data/brands.json";
@@ -28,8 +27,8 @@ export function BrandsShowcase() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.05 }}
             >
-              <Link 
-                to={`/marca/${brand.id}`}
+              <a
+                href={`/marca/${brand.id}`}
                 className="group bg-card rounded-xl p-6 flex flex-col items-center justify-center gap-3 card-hover border border-border min-h-[140px]"
               >
                 <span className="text-4xl group-hover:scale-110 transition-transform duration-300">
@@ -42,17 +41,17 @@ export function BrandsShowcase() {
                   <span className="text-rating-star">★</span>
                   <span className="text-muted-foreground">{brand.rating}</span>
                 </div>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>
 
         <div className="text-center">
           <Button asChild variant="outline">
-            <Link to="/marcas">
+            <a href="/marcas">
               Ver todas las marcas
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

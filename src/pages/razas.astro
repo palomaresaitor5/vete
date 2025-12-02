@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { AppProviders } from "../react-pages/AppProviders";
+import BreedsPage from "../react-pages/BreedsPage";
+---
+<BaseLayout title="Guía de razas | PetFood Expert">
+  <AppProviders client:load>
+    <BreedsPage />
+  </AppProviders>
+</BaseLayout>

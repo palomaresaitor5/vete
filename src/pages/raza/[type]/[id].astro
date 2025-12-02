@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { AppProviders } from "../../../react-pages/AppProviders";
+import BreedDetailPage from "../../../react-pages/BreedDetailPage";
+import NotFound from "../../../react-pages/NotFound";
+import breeds from "../../../data/breeds.json";
+
+const { type, id } = Astro.params;
+const isDog = type === "dog";
+const breedList = isDog ? breeds.dogs : breeds.cats;
+const breed = breedList.find((item) => item.id === id);
+const pageTitle = breed ? `${breed.name} | Guía de razas` : "Raza no encontrada";
+---
+<BaseLayout title={pageTitle}>
+  {breed && (type === "dog" || type === "cat") ? (
+    <AppProviders client:load>
+      <BreedDetailPage breed={breed} type={type as "dog" | "cat"} />
+    </AppProviders>
+  ) : (
+    <AppProviders client:load>
+      <NotFound path={Astro.url.pathname} />
+    </AppProviders>
+  )}
+</BaseLayout>

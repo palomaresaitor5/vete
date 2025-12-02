@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { AppProviders } from "../react-pages/AppProviders";
+import IndexPage from "../react-pages/Index";
+---
+<BaseLayout>
+  <AppProviders client:load>
+    <IndexPage />
+  </AppProviders>
+</BaseLayout>

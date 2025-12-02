@@ -1,6 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { Mail, Instagram, Award, BookOpen, Heart, Users, GraduationCap, ArrowRight } from "lucide-react";
 import authorData from "@/data/author.json";
 import { motion } from "framer-motion";
@@ -14,7 +13,7 @@ const AuthorPage = () => {
   ];
 
   return (
-    <Layout>
+    <Layout currentPath="/autor">
       {/* Header */}
       <section className="bg-gradient-to-b from-secondary/50 to-background py-16">
         <div className="container">
@@ -169,10 +168,10 @@ const AuthorPage = () => {
                     Explora mis reviews detallados para encontrar la mejor alimentación para tu mascota.
                   </p>
                   <Button asChild className="w-full">
-                    <Link to="/articulos">
+                    <a href="/articulos">
                       Ver Reviews
                       <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </motion.div>

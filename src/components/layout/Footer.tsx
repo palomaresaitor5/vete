@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { PawPrint, Heart, Mail, Instagram } from "lucide-react";
 
 export function Footer() {
@@ -8,14 +7,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
+            <a href="/" className="flex items-center gap-2 mb-4">
               <PawPrint className="h-7 w-7 text-primary" />
               <span className="font-heading text-xl font-bold">
                 <span className="text-primary">Pet</span>
                 <span className="text-accent">Food</span>
                 <span className="text-foreground"> Expert</span>
               </span>
-            </Link>
+            </a>
             <p className="text-muted-foreground max-w-md">
               Opiniones honestas y análisis detallados de comidas y piensos para perros y gatos, 
               escritos por un veterinario con más de 35 años de experiencia.
@@ -27,24 +26,24 @@ export function Footer() {
             <h4 className="font-heading font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/articulos" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/articulos" className="text-muted-foreground hover:text-primary transition-colors">
                   Reviews
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/marcas" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/marcas" className="text-muted-foreground hover:text-primary transition-colors">
                   Marcas
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/razas" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/razas" className="text-muted-foreground hover:text-primary transition-colors">
                   Razas
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/autor" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/autor" className="text-muted-foreground hover:text-primary transition-colors">
                   Sobre el Autor
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

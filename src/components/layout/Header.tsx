@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { Menu, X, PawPrint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+
+interface HeaderProps {
+  currentPath?: string;
+}
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -13,14 +16,16 @@ const navLinks = [
   { href: "/autor", label: "Sobre Mí" },
 ];
 
-export function Header() {
+export function Header({ currentPath = "/" }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+
+  const isActivePath = (href: string) =>
+    currentPath === href || currentPath.startsWith(`${href}/`);
 
   return (
     <header className="sticky top-0 z-50 glass-effect">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
+        <a href="/" className="flex items-center gap-2 group">
           <div className="relative">
             <PawPrint className="h-8 w-8 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
             <div className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-accent animate-pulse" />
@@ -30,23 +35,23 @@ export function Header() {
             <span className="text-accent">Food</span>
             <span className="text-foreground"> Expert</span>
           </span>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
-              to={link.href}
+              href={link.href}
               className={cn(
                 "px-4 py-2 rounded-lg font-medium transition-all duration-200",
-                location.pathname === link.href
+                isActivePath(link.href)
                   ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
               )}
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -72,19 +77,19 @@ export function Header() {
           >
             <div className="container py-4 flex flex-col gap-2">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
-                  to={link.href}
+                  href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     "px-4 py-3 rounded-lg font-medium transition-all duration-200",
-                    location.pathname === link.href
+                    isActivePath(link.href)
                       ? "bg-primary/10 text-primary"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   )}
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </div>
           </motion.nav>

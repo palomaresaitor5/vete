@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowRight, FileText } from "lucide-react";
 import { RatingStars } from "./RatingStars";
 import { motion } from "framer-motion";
@@ -27,7 +26,7 @@ export function BrandCard({ brand, index = 0 }: BrandCardProps) {
       transition={{ delay: index * 0.1 }}
       className="group"
     >
-      <Link to={`/marca/${brand.id}`}>
+      <a href={`/marca/${brand.id}`}>
         <div className="bg-card rounded-2xl p-6 card-hover border border-border h-full flex flex-col">
           {/* Header */}
           <div className="flex items-start gap-4 mb-4">
@@ -68,7 +67,7 @@ export function BrandCard({ brand, index = 0 }: BrandCardProps) {
             </span>
           </div>
         </div>
-      </Link>
+      </a>
     </motion.article>
   );
 }

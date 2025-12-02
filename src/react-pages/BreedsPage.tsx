@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { BreedCard } from "@/components/shared/BreedCard";
 import { Button } from "@/components/ui/button";
@@ -9,14 +8,20 @@ import { motion } from "framer-motion";
 type TabType = "perros" | "gatos";
 
 const BreedsPage = () => {
-  const [searchParams] = useSearchParams();
-  const initialTab = searchParams.get("type") as TabType || "perros";
-  const [activeTab, setActiveTab] = useState<TabType>(initialTab);
+  const [activeTab, setActiveTab] = useState<TabType>("perros");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type") as TabType | null;
+    if (type === "perros" || type === "gatos") {
+      setActiveTab(type);
+    }
+  }, []);
 
   const breeds = activeTab === "perros" ? breedsData.dogs : breedsData.cats;
 
   return (
-    <Layout>
+    <Layout currentPath="/razas">
       {/* Header */}
       <section className="bg-gradient-to-b from-secondary/50 to-background py-12">
         <div className="container">

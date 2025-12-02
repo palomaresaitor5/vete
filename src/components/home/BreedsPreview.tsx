@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import breedsData from "@/data/breeds.json";
@@ -43,9 +42,9 @@ export function BreedsPreview() {
             
             <div className="space-y-3">
               {topDogs.map((breed) => (
-                <Link 
+                <a
                   key={breed.id}
-                  to={`/raza/dog/${breed.id}`}
+                  href={`/raza/dog/${breed.id}`}
                   className="flex items-center gap-3 p-3 rounded-xl hover:bg-dog-light/50 transition-colors group"
                 >
                   <span className="text-2xl">{breed.image}</span>
@@ -54,15 +53,15 @@ export function BreedsPreview() {
                     <p className="text-xs text-muted-foreground">{breed.origin} • {breed.size}</p>
                   </div>
                   <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-dog transition-colors" />
-                </Link>
+                </a>
               ))}
             </div>
             
             <Button asChild variant="ghost" className="w-full mt-4 text-dog hover:text-dog hover:bg-dog-light">
-              <Link to="/razas?type=perros">
+              <a href="/razas?type=perros">
                 Ver todas las razas de perros
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </motion.div>
 
@@ -86,9 +85,9 @@ export function BreedsPreview() {
             
             <div className="space-y-3">
               {topCats.map((breed) => (
-                <Link 
+                <a
                   key={breed.id}
-                  to={`/raza/cat/${breed.id}`}
+                  href={`/raza/cat/${breed.id}`}
                   className="flex items-center gap-3 p-3 rounded-xl hover:bg-cat-light/50 transition-colors group"
                 >
                   <span className="text-2xl">{breed.image}</span>
@@ -97,15 +96,15 @@ export function BreedsPreview() {
                     <p className="text-xs text-muted-foreground">{breed.origin} • {breed.size}</p>
                   </div>
                   <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-cat transition-colors" />
-                </Link>
+                </a>
               ))}
             </div>
             
             <Button asChild variant="ghost" className="w-full mt-4 text-cat hover:text-cat hover:bg-cat-light">
-              <Link to="/razas?type=gatos">
+              <a href="/razas?type=gatos">
                 Ver todas las razas de gatos
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </motion.div>
         </div>

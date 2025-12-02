@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight, Award, BookOpen, Heart, Users } from "lucide-react";
 import authorData from "@/data/author.json";
 import { motion } from "framer-motion";
@@ -72,10 +71,10 @@ export function AboutAuthor() {
             </div>
 
             <Button asChild>
-              <Link to="/autor">
+              <a href="/autor">
                 Conoce mi historia
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </motion.div>
         </div>

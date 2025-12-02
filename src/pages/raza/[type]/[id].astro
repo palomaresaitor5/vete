@@ -5,12 +5,34 @@ import BreedDetailPage from "../../../react-pages/BreedDetailPage";
 import NotFound from "../../../react-pages/NotFound";
 import breeds from "../../../data/breeds.json";
 
+export async function getStaticPaths() {
+  const breeds = (await import("../../../data/breeds.json")).default;
+  const paths = [];
+
+  breeds.dogs.forEach((breed) => {
+    paths.push({
+      params: { type: "dog", id: breed.id },
+      props: { breed, type: "dog" },
+    });
+  });
+
+  breeds.cats.forEach((breed) => {
+    paths.push({
+      params: { type: "cat", id: breed.id },
+      props: { breed, type: "cat" },
+    });
+  });
+
+  return paths;
+}
+
 const { type, id } = Astro.params;
 const isDog = type === "dog";
 const breedList = isDog ? breeds.dogs : breeds.cats;
 const breed = breedList.find((item) => item.id === id);
 const pageTitle = breed ? `${breed.name} | Guía de razas` : "Raza no encontrada";
 ---
+
 <BaseLayout title={pageTitle}>
   {breed && (type === "dog" || type === "cat") ? (
     <AppProviders client:load>

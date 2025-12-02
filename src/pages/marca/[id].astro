@@ -6,11 +6,20 @@ import NotFound from "../../react-pages/NotFound";
 import brands from "../../data/brands.json";
 import articles from "../../data/articles.json";
 
+export async function getStaticPaths() {
+  const brands = (await import("../../data/brands.json")).default;
+  return brands.map((brand) => ({
+    params: { id: brand.id },
+    props: { brand },
+  }));
+}
+
 const { id } = Astro.params;
 const brand = brands.find((item) => item.id === id);
 const brandArticles = articles.filter((article) => article.brandId === id);
 const pageTitle = brand ? `${brand.name} | Marcas de comida para mascotas` : "Marca no encontrada";
 ---
+
 <BaseLayout title={pageTitle}>
   {brand ? (
     <AppProviders client:load>

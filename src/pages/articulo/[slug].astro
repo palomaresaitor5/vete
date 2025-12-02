@@ -1,4 +1,11 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { AppProviders } from "../../react-pages/AppProviders";
+import ArticleDetailPage from "../../react-pages/ArticleDetailPage";
+import NotFound from "../../react-pages/NotFound";
+import articles from "../../data/articles.json";
+import brands from "../../data/brands.json";
+
 export async function getStaticPaths() {
   const articles = (await import("../../data/articles.json")).default;
   return articles.map((article) => ({
@@ -6,12 +13,7 @@ export async function getStaticPaths() {
     props: { article },
   }));
 }
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { AppProviders } from "../../react-pages/AppProviders";
-import ArticleDetailPage from "../../react-pages/ArticleDetailPage";
-import NotFound from "../../react-pages/NotFound";
-import articles from "../../data/articles.json";
-import brands from "../../data/brands.json";
+
 const { slug } = Astro.params;
 const article = articles.find((item) => item.slug === slug);
 const brand = article ? brands.find((item) => item.id === article.brandId) : undefined;
@@ -19,6 +21,7 @@ const pageTitle = article
   ? `${article.title} | PetFood Expert`
   : "Artículo no encontrado";
 ---
+
 <BaseLayout title={pageTitle}>
   {article ? (
     <AppProviders client:load>

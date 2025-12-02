@@ -1,0 +1,26 @@
+{
+  "name": "Dr. Manuel García",
+  "title": "Veterinario Jubilado",
+  "image": "👨‍⚕️",
+  "location": "Madrid, España",
+  "experience": "35 años de experiencia",
+  "specialties": ["Nutrición animal", "Medicina interna", "Geriatría animal"],
+  "bio": "Después de más de tres décadas dedicado a la medicina veterinaria, decidí crear este espacio para compartir todo lo que he aprendido sobre la nutrición de nuestros compañeros peludos. Durante mi carrera he visto cómo una alimentación adecuada puede prevenir enfermedades y mejorar significativamente la calidad de vida de perros y gatos.",
+  "mission": "Mi misión es ayudarte a tomar decisiones informadas sobre la alimentación de tu mascota, basándome en ciencia, experiencia y mucho amor por los animales.",
+  "credentials": [
+    "Licenciado en Veterinaria por la Universidad Complutense de Madrid",
+    "Máster en Nutrición Animal",
+    "Miembro del Colegio de Veterinarios de Madrid",
+    "Ex-director de clínica veterinaria durante 20 años"
+  ],
+  "socialMedia": {
+    "email": "contacto@opinionesmascotas.es",
+    "instagram": "@dr_garcia_vet"
+  },
+  "stats": {
+    "reviewsWritten": 150,
+    "yearsExperience": 35,
+    "petsHelped": 10000,
+    "brandsAnalyzed": 50
+  }
+}

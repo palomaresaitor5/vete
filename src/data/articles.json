@@ -1,0 +1,330 @@
+[
+  {
+    "id": "royal-canin-maxi-adult",
+    "title": "Royal Canin Maxi Adult",
+    "slug": "royal-canin-maxi-adult-opinion",
+    "brandId": "royal-canin",
+    "petType": "perro",
+    "category": "Pienso Seco",
+    "rating": 4.5,
+    "image": "🦮",
+    "excerpt": "Análisis completo del pienso más vendido para perros grandes en España.",
+    "publishDate": "2024-01-15",
+    "readTime": 8,
+    "featured": true,
+    "pros": [
+      "Excelente digestibilidad comprobada en estudios",
+      "Croqueta adaptada a mandíbulas grandes",
+      "Fórmula equilibrada para articulaciones",
+      "Muy palatable para la mayoría de perros",
+      "Disponible en cualquier tienda"
+    ],
+    "cons": [
+      "Precio elevado respecto a la competencia",
+      "Contiene cereales como ingrediente principal",
+      "Algunos aditivos artificiales innecesarios"
+    ],
+    "ingredients": {
+      "protein": 26,
+      "fat": 17,
+      "fiber": 1.3,
+      "moisture": 9.5,
+      "ash": 6.7,
+      "carbs": 40,
+      "omega3": 0.7,
+      "omega6": 3.2,
+      "mainIngredients": ["Proteínas de ave deshidratadas", "Arroz", "Maíz", "Grasas animales", "Trigo", "Harina de maíz"],
+      "additives": ["Vitamina A", "Vitamina D3", "Hierro", "Yodo", "Cobre", "Manganeso", "Zinc", "Selenio"],
+      "preservatives": ["Antioxidantes naturales", "Tocoferoles"]
+    },
+    "scores": {
+      "ingredients": 4.0,
+      "nutrition": 4.5,
+      "palatability": 5.0,
+      "priceQuality": 3.5,
+      "overall": 4.5
+    },
+    "detailedAnalysis": {
+      "ingredientsAnalysis": "La fórmula utiliza proteínas de ave deshidratadas como ingrediente principal, lo cual es positivo. Sin embargo, los cereales (arroz, maíz, trigo) ocupan una parte significativa de la composición. Para un pienso premium, esperaríamos ver carne fresca en primer lugar.",
+      "nutritionAnalysis": "Con un 26% de proteína y 17% de grasa, cumple los estándares para perros adultos de razas grandes. El nivel de fibra es bajo (1.3%), lo que puede ser insuficiente para algunos perros. Los omega-3 y omega-6 están en proporciones adecuadas para mantener piel y pelaje saludables.",
+      "palatabilityAnalysis": "Royal Canin destaca por su investigación en palatabilidad. La mayoría de perros aceptan este pienso sin problemas. La textura y tamaño de la croqueta están diseñados específicamente para razas grandes.",
+      "priceAnalysis": "Siendo un producto premium, el precio es elevado. Considerando que hay alternativas con mejor composición por precio similar, la relación calidad-precio es mejorable."
+    },
+    "recommendedFor": ["Perros grandes adultos (25-45kg)", "Perros con buena salud general", "Dueños que buscan conveniencia"],
+    "notRecommendedFor": ["Perros con alergias a cereales", "Presupuestos ajustados", "Perros con problemas digestivos"],
+    "verdict": "Un pienso de calidad premium ideal para perros grandes activos. Aunque contiene cereales, su fórmula está bien equilibrada y la aceptación es excelente. Recomendado para dueños que priorizan la conveniencia y palatabilidad sobre la composición natural."
+  },
+  {
+    "id": "orijen-original-dog",
+    "title": "Orijen Original Dog",
+    "slug": "orijen-original-dog-opinion",
+    "brandId": "orijen",
+    "petType": "perro",
+    "category": "Pienso Seco",
+    "rating": 4.9,
+    "image": "🐕",
+    "excerpt": "El estándar de oro en alimentación canina natural y biológicamente apropiada.",
+    "publishDate": "2024-02-01",
+    "readTime": 10,
+    "featured": true,
+    "pros": [
+      "85% ingredientes de origen animal frescos",
+      "Sin cereales ni rellenos artificiales",
+      "Ingredientes regionales de alta calidad",
+      "Excelente perfil nutricional completo",
+      "Variedad de proteínas (pollo, pavo, pescado)"
+    ],
+    "cons": [
+      "Precio muy elevado",
+      "No apto para todos los bolsillos",
+      "Puede ser demasiado rico para perros sedentarios"
+    ],
+    "ingredients": {
+      "protein": 38,
+      "fat": 18,
+      "fiber": 5,
+      "moisture": 12,
+      "ash": 8,
+      "carbs": 19,
+      "omega3": 1.0,
+      "omega6": 3.0,
+      "mainIngredients": ["Pollo fresco", "Pavo fresco", "Huevos enteros", "Caballa entera", "Hígado de pollo", "Arenque entero"],
+      "additives": ["Vitamina E", "Zinc", "Cobre"],
+      "preservatives": ["Tocoferoles naturales"]
+    },
+    "scores": {
+      "ingredients": 5.0,
+      "nutrition": 5.0,
+      "palatability": 4.8,
+      "priceQuality": 4.0,
+      "overall": 4.9
+    },
+    "detailedAnalysis": {
+      "ingredientsAnalysis": "Orijen establece el estándar con un 85% de ingredientes de origen animal. Utilizan carne fresca, no deshidratada, y la variedad de proteínas (pollo, pavo, pescado, huevos) proporciona un perfil de aminoácidos completo. Sin cereales, sin patata, sin ingredientes de relleno.",
+      "nutritionAnalysis": "38% de proteína y 18% de grasa es ideal para perros activos. El contenido de carbohidratos es bajo (19%), lo que se acerca más a la dieta natural de un canino. Excelente contenido de omega-3 para salud articular y cognitiva.",
+      "palatabilityAnalysis": "La alta concentración de proteínas animales frescas hace que sea muy atractivo para los perros. Algunos pueden necesitar un período de transición debido a la riqueza del alimento.",
+      "priceAnalysis": "Es uno de los piensos más caros del mercado, pero la calidad justifica el precio para quienes pueden permitírselo. Considerando los ingredientes, es una inversión en la salud de tu mascota."
+    },
+    "recommendedFor": ["Perros activos y deportistas", "Dueños que buscan la mejor calidad", "Perros sin problemas de peso"],
+    "notRecommendedFor": ["Presupuestos limitados", "Perros sedentarios o con sobrepeso", "Perros mayores con problemas renales"],
+    "verdict": "El mejor pienso del mercado para quien pueda permitírselo. Calidad excepcional con ingredientes que podrías comer tú mismo. La inversión en salud a largo plazo."
+  },
+  {
+    "id": "acana-wild-prairie-cat",
+    "title": "Acana Wild Prairie Cat",
+    "slug": "acana-wild-prairie-cat-opinion",
+    "brandId": "acana",
+    "petType": "gato",
+    "category": "Pienso Seco",
+    "rating": 4.7,
+    "image": "🐱",
+    "excerpt": "Alimentación premium para gatos con proteínas de corral de alta calidad.",
+    "publishDate": "2024-01-20",
+    "readTime": 7,
+    "featured": true,
+    "pros": [
+      "70% ingredientes de origen animal",
+      "Pollo y pavo criados en libertad",
+      "Sin cereales ni gluten",
+      "Rico en omega-3 para pelaje brillante",
+      "Taurina natural de la carne"
+    ],
+    "cons": [
+      "Precio alto para el mercado español",
+      "Difícil de encontrar en tiendas físicas"
+    ],
+    "ingredients": {
+      "protein": 37,
+      "fat": 20,
+      "fiber": 3,
+      "moisture": 10,
+      "ash": 7,
+      "carbs": 23,
+      "omega3": 0.9,
+      "omega6": 2.8,
+      "mainIngredients": ["Pollo fresco", "Pavo fresco", "Huevos enteros", "Lucio", "Trucha arcoíris", "Hígado de pollo"],
+      "additives": ["Taurina", "Vitamina A", "Vitamina D3", "Zinc"],
+      "preservatives": ["Tocoferoles naturales", "Romero"]
+    },
+    "scores": {
+      "ingredients": 4.8,
+      "nutrition": 4.8,
+      "palatability": 4.6,
+      "priceQuality": 4.2,
+      "overall": 4.7
+    },
+    "detailedAnalysis": {
+      "ingredientsAnalysis": "Con un 70% de ingredientes animales, Acana cumple las expectativas de un pienso premium para gatos. La combinación de aves de corral y pescado proporciona proteínas variadas y de alta biodisponibilidad.",
+      "nutritionAnalysis": "37% de proteína es excelente para gatos, carnívoros estrictos. El 20% de grasa proporciona energía y ácidos grasos esenciales. La taurina natural de la carne es crucial para la salud cardíaca felina.",
+      "palatabilityAnalysis": "Los gatos suelen ser más exigentes que los perros, pero Acana tiene buena aceptación. El aroma a carne fresca es atractivo para la mayoría de felinos.",
+      "priceAnalysis": "En el segmento super premium, ofrece buena relación calidad-precio comparado con Orijen. Una opción más accesible sin sacrificar demasiada calidad."
+    },
+    "recommendedFor": ["Gatos adultos activos", "Gatos con pelaje opaco", "Dueños que buscan calidad premium"],
+    "notRecommendedFor": ["Gatos con sobrepeso", "Presupuestos muy ajustados", "Gatos con problemas renales crónicos"],
+    "verdict": "Excelente opción para gatos exigentes que buscan una alimentación natural y de alta calidad. Un escalón por debajo de Orijen pero mucho más accesible."
+  },
+  {
+    "id": "hills-sensitive-stomach",
+    "title": "Hill's Sensitive Stomach & Skin",
+    "slug": "hills-sensitive-stomach-skin-opinion",
+    "brandId": "hills",
+    "petType": "perro",
+    "category": "Pienso Terapéutico",
+    "rating": 4.4,
+    "image": "🩺",
+    "excerpt": "La mejor opción para perros con problemas digestivos y dermatológicos.",
+    "publishDate": "2024-02-10",
+    "readTime": 9,
+    "featured": false,
+    "pros": [
+      "Formulado por veterinarios especialistas",
+      "Excelente para problemas digestivos crónicos",
+      "Mejora visible la calidad del pelaje",
+      "Omega-6 optimizado para la piel",
+      "Prebióticos para flora intestinal"
+    ],
+    "cons": [
+      "Sabor menos atractivo que otras marcas",
+      "Principalmente disponible en veterinarias",
+      "Precio elevado para uso continuo"
+    ],
+    "ingredients": {
+      "protein": 22,
+      "fat": 14,
+      "fiber": 1.5,
+      "moisture": 8,
+      "ash": 5.5,
+      "carbs": 49,
+      "omega3": 0.5,
+      "omega6": 4.1,
+      "mainIngredients": ["Pollo", "Cebada perlada", "Arroz integral", "Avena", "Harina de pollo", "Grasa de pollo"],
+      "additives": ["Vitamina E", "Vitamina C", "Beta-caroteno", "Biotina", "Zinc"],
+      "preservatives": ["Tocoferoles mixtos", "Ácido cítrico"]
+    },
+    "scores": {
+      "ingredients": 4.0,
+      "nutrition": 4.5,
+      "palatability": 4.0,
+      "priceQuality": 4.0,
+      "overall": 4.4
+    },
+    "detailedAnalysis": {
+      "ingredientsAnalysis": "Hill's utiliza ingredientes seleccionados por su digestibilidad. El pollo como proteína principal es hipoalergénico para la mayoría de perros. Los cereales (cebada, arroz, avena) son de fácil digestión.",
+      "nutritionAnalysis": "22% de proteína es moderado pero adecuado para perros con sensibilidad. El alto contenido de omega-6 (4.1%) está diseñado específicamente para mejorar la barrera cutánea.",
+      "palatabilityAnalysis": "Al ser una dieta terapéutica, la palatabilidad puede ser menor. Algunos perros pueden rechazarlo inicialmente, pero la mayoría se adapta en pocos días.",
+      "priceAnalysis": "Como alimento veterinario, el precio es justificado si realmente resuelve los problemas digestivos o dermatológicos. Mejor prevenir visitas al veterinario."
+    },
+    "recommendedFor": ["Perros con estómago sensible", "Perros con problemas de piel", "Perros con alergias alimentarias leves"],
+    "notRecommendedFor": ["Perros sin problemas digestivos", "Perros muy activos que necesitan más proteína", "Quienes buscan ingredientes naturales"],
+    "verdict": "Ideal si tu perro tiene el estómago delicado o problemas de piel. Los resultados se ven en pocas semanas. Confía en la ciencia de Hill's."
+  },
+  {
+    "id": "taste-wild-pacific-stream",
+    "title": "Taste of the Wild Pacific Stream",
+    "slug": "taste-wild-pacific-stream-opinion",
+    "brandId": "taste-wild",
+    "petType": "perro",
+    "category": "Pienso Seco",
+    "rating": 4.6,
+    "image": "🐟",
+    "excerpt": "Pienso a base de salmón ahumado, ideal para perros alérgicos al pollo.",
+    "publishDate": "2024-01-28",
+    "readTime": 7,
+    "featured": false,
+    "pros": [
+      "Proteína única de pescado (sin aves)",
+      "Ideal para perros con alergias al pollo",
+      "Sin cereales ni gluten",
+      "Excelente relación calidad-precio",
+      "Alto contenido de omega-3"
+    ],
+    "cons": [
+      "Olor intenso a pescado",
+      "No a todos los perros les gusta el sabor",
+      "Las heces pueden oler más fuerte"
+    ],
+    "ingredients": {
+      "protein": 25,
+      "fat": 15,
+      "fiber": 3,
+      "moisture": 10,
+      "ash": 7.5,
+      "carbs": 39.5,
+      "omega3": 0.8,
+      "omega6": 2.4,
+      "mainIngredients": ["Salmón ahumado", "Harina de pescado oceánico", "Batata", "Patata", "Guisantes", "Aceite de salmón"],
+      "additives": ["Vitamina E", "Vitamina B12", "Zinc", "Selenio", "Taurina"],
+      "preservatives": ["Tocoferoles naturales"]
+    },
+    "scores": {
+      "ingredients": 4.5,
+      "nutrition": 4.5,
+      "palatability": 4.5,
+      "priceQuality": 4.8,
+      "overall": 4.6
+    },
+    "detailedAnalysis": {
+      "ingredientsAnalysis": "Taste of the Wild utiliza salmón ahumado real como ingrediente principal. La ausencia total de aves lo hace perfecto para perros con intolerancia al pollo o pavo. Las batatas y patatas proporcionan carbohidratos de digestión lenta.",
+      "nutritionAnalysis": "25% de proteína de pescado es adecuado y muy digestible. El contenido de omega-3 (0.8%) es superior a la mayoría de piensos, beneficiando articulaciones, piel y función cognitiva.",
+      "palatabilityAnalysis": "El sabor a salmón ahumado es muy atractivo para muchos perros, aunque algunos pueden rechazarlo si no están acostumbrados al pescado. Transición gradual recomendada.",
+      "priceAnalysis": "Una de las mejores relaciones calidad-precio del mercado. Calidad premium a precio de gama media. Difícil de superar en este aspecto."
+    },
+    "recommendedFor": ["Perros alérgicos al pollo/pavo", "Perros con piel seca o pelaje opaco", "Dueños con presupuesto medio"],
+    "notRecommendedFor": ["Perros que rechazan el pescado", "Dueños sensibles a olores fuertes", "Perros con alergia al pescado"],
+    "verdict": "Una opción fantástica para perros con intolerancias a las aves. El salmón aporta omega-3 para un pelaje brillante. Mejor relación calidad-precio del segmento premium."
+  },
+  {
+    "id": "applaws-adult-cat-chicken",
+    "title": "Applaws Adult Cat Chicken",
+    "slug": "applaws-adult-cat-chicken-opinion",
+    "brandId": "applaws",
+    "petType": "gato",
+    "category": "Pienso Seco",
+    "rating": 4.7,
+    "image": "🐈",
+    "excerpt": "80% de pollo real para gatos carnívoros exigentes.",
+    "publishDate": "2024-02-15",
+    "readTime": 6,
+    "featured": true,
+    "pros": [
+      "80% carne de pollo de alta calidad",
+      "Sin cereales ni gluten añadidos",
+      "Ingredientes 100% naturales",
+      "Muy palatable para gatos exigentes",
+      "Alto contenido proteico"
+    ],
+    "cons": [
+      "Precio alto en el mercado español",
+      "Envases pequeños poco económicos"
+    ],
+    "ingredients": {
+      "protein": 47,
+      "fat": 20,
+      "fiber": 2.5,
+      "moisture": 7,
+      "ash": 10.5,
+      "carbs": 13,
+      "omega3": 0.4,
+      "omega6": 2.9,
+      "mainIngredients": ["Pollo deshidratado", "Pollo fresco molido", "Grasa de pollo", "Fibra vegetal", "Hidrolizado de pollo", "Levadura de cerveza"],
+      "additives": ["Taurina", "Vitamina A", "Vitamina D3", "Vitamina E"],
+      "preservatives": ["Antioxidantes naturales"]
+    },
+    "scores": {
+      "ingredients": 5.0,
+      "nutrition": 4.8,
+      "palatability": 4.8,
+      "priceQuality": 4.0,
+      "overall": 4.7
+    },
+    "detailedAnalysis": {
+      "ingredientsAnalysis": "Applaws destaca por su simplicidad: 80% pollo y poco más. Sin ingredientes de relleno, sin cereales, sin aditivos artificiales. Es lo más cercano a la dieta natural de un gato que encontrarás en pienso seco.",
+      "nutritionAnalysis": "47% de proteína es excepcional y muy apropiado para gatos como carnívoros estrictos. El bajo contenido de carbohidratos (13%) es ideal para prevenir obesidad y diabetes felina.",
+      "palatabilityAnalysis": "Los gatos enloquecen con Applaws. El alto contenido de carne real lo hace irresistible. Incluso los gatos más quisquillosos suelen aceptarlo.",
+      "priceAnalysis": "Es caro, especialmente considerando los envases pequeños. Sin embargo, la pureza de ingredientes y los resultados en salud pueden justificar la inversión."
+    },
+    "recommendedFor": ["Gatos carnívoros estrictos", "Gatos con sobrepeso (por bajo carbs)", "Dueños que buscan ingredientes puros"],
+    "notRecommendedFor": ["Presupuestos muy limitados", "Gatos con alergia al pollo", "Quienes prefieren envases grandes"],
+    "verdict": "Si quieres lo mejor para tu gato y el precio no es un problema, Applaws es una elección acertada. 80% pollo real, sin trucos."
+  }
+]

@@ -5,12 +5,6 @@ import BreedDetailPage from "../../../react-pages/BreedDetailPage";
 import NotFound from "../../../react-pages/NotFound";
 import breeds from "../../../data/breeds.json";
 
-export function getStaticPaths() {
-  const dogPaths = breeds.dogs.map((breed) => ({ params: { type: "dog", id: breed.id } }));
-  const catPaths = breeds.cats.map((breed) => ({ params: { type: "cat", id: breed.id } }));
-  return [...dogPaths, ...catPaths];
-}
-
 const { type, id } = Astro.params;
 const isDog = type === "dog";
 const breedList = isDog ? breeds.dogs : breeds.cats;

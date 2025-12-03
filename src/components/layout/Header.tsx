@@ -70,9 +70,9 @@ export function Header({ currentPath = "/" }: HeaderProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.nav
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 1, height: "auto" }}
             animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 1, height: "auto" }}
             className="md:hidden border-t border-border bg-background"
           >
             <div className="container py-4 flex flex-col gap-2">

@@ -26,7 +26,7 @@ const BreedsPage = () => {
       <section className="bg-gradient-to-b from-secondary/50 to-background py-12">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >

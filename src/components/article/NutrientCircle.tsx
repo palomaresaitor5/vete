@@ -27,7 +27,7 @@ export function NutrientCircle({ value, label, unit = "%", color, size = "md" }:
   
   return (
     <motion.div
-      initial={{ scale: 0, opacity: 0 }}
+      initial={{ scale: 1, opacity: 1 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.4 }}
       className="flex flex-col items-center gap-2"

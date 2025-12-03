@@ -17,7 +17,7 @@ export function AboutAuthor() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Side */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="relative"
@@ -45,7 +45,7 @@ export function AboutAuthor() {
 
           {/* Content Side */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >

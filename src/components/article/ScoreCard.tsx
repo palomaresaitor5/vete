@@ -27,7 +27,7 @@ export function ScoreCard({ score, label, icon: Icon, description, index = 0 }: 
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 1, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
       className="bg-card rounded-2xl p-5 border border-border hover:shadow-card transition-shadow"

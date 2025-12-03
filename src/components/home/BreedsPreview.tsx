@@ -25,7 +25,7 @@ export function BreedsPreview() {
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           {/* Dogs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-card rounded-2xl p-6 border border-border"
@@ -67,7 +67,7 @@ export function BreedsPreview() {
 
           {/* Cats */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}

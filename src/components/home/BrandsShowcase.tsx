@@ -23,7 +23,7 @@ export function BrandsShowcase() {
           {brandsData.slice(0, 8).map((brand, index) => (
             <motion.div
               key={brand.id}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 1, scale: 1 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.05 }}
             >

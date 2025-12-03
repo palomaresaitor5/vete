@@ -21,16 +21,10 @@ interface RadarChartProps {
 export function ArticleRadarChart({ scores }: RadarChartProps) {
   const [mounted, setMounted] = useState(false);
 
-  // Solución definitiva: esperar a que el layout esté estable
   useEffect(() => {
-    const timeout = setTimeout(() => setMounted(true), 50);
+    const timeout = setTimeout(() => setMounted(true), 100);
     return () => clearTimeout(timeout);
   }, []);
-
-  // Mientras no está montado, devolvemos un placeholder con altura
-  if (!mounted) {
-    return <div className="w-full min-h-[300px]" />;
-  }
 
   const data = [
     { subject: "Ingredientes", value: scores.ingredients, fullMark: 5 },
@@ -40,10 +34,14 @@ export function ArticleRadarChart({ scores }: RadarChartProps) {
     { subject: "Global", value: scores.overall, fullMark: 5 }
   ];
 
+  if (!mounted) {
+    return <div className="w-full h-[320px] flex items-center justify-center bg-secondary/30 rounded-lg animate-pulse" />;
+  }
+
   return (
-    <div className="w-full min-h-[300px] relative">
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="75%" data={data}>
+    <div className="w-full h-[320px]">
+      <ResponsiveContainer width="100%" height={320}>
+        <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
           <PolarGrid stroke="hsl(var(--border))" strokeDasharray="3 3" />
           <PolarAngleAxis
             dataKey="subject"

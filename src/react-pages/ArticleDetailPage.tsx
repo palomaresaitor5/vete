@@ -127,14 +127,12 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
             className="grid md:grid-cols-2 gap-8"
           >
             {/* Radar Chart */}
-            <div className="bg-card rounded-2xl p-6 border border-border min-h-[380px] flex flex-col">
+            <div className="bg-card rounded-2xl p-6 border border-border flex flex-col">
               <h3 className="font-heading font-semibold text-lg mb-4 flex items-center gap-2">
                 <Target className="h-5 w-5 text-primary" />
                 Análisis Visual de Puntuaciones
               </h3>
-              <div className="w-full" style={{ height: "320px" }}>
-                <ArticleRadarChart scores={article.scores} />
-              </div>
+              <ArticleRadarChart scores={article.scores} />
             </div>
 
             {/* Score Cards */}

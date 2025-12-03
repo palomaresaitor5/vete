@@ -44,7 +44,7 @@ const BrandDetailPage = ({
           </Button>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             className="grid md:grid-cols-3 gap-8 items-center"
           >

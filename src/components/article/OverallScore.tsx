@@ -66,7 +66,7 @@ export function OverallScore({ score, maxScore = 5 }: OverallScoreProps) {
         </div>
       </div>
       <motion.div
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 1, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
         className="mt-3 flex flex-col items-center gap-1"

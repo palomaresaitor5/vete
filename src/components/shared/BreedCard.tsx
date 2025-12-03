@@ -23,7 +23,7 @@ export function BreedCard({ breed, type, index = 0 }: BreedCardProps) {
   
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 1, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
       className="group"

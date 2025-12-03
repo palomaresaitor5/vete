@@ -49,7 +49,7 @@ const BreedDetailPage = ({ breed, type }: BreedDetailPageProps) => {
           </Button>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             className="grid lg:grid-cols-3 gap-8 items-start"
           >
@@ -140,7 +140,7 @@ const BreedDetailPage = ({ breed, type }: BreedDetailPageProps) => {
             <div className="lg:col-span-2 space-y-8">
               {/* Health Issues */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
                 className="bg-card rounded-2xl p-6 border border-border"
@@ -164,7 +164,7 @@ const BreedDetailPage = ({ breed, type }: BreedDetailPageProps) => {
 
               {/* Feeding Tips */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 border border-primary/20"
@@ -181,7 +181,7 @@ const BreedDetailPage = ({ breed, type }: BreedDetailPageProps) => {
 
             {/* Recommended Brands */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 1, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >

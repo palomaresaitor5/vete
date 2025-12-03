@@ -18,7 +18,7 @@ const AuthorPage = () => {
       <section className="bg-gradient-to-b from-secondary/50 to-background py-16">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
@@ -50,7 +50,7 @@ const AuthorPage = () => {
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-card rounded-2xl p-6 border border-border text-center"
@@ -73,7 +73,7 @@ const AuthorPage = () => {
               <div className="md:col-span-2 space-y-8">
                 {/* Bio */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
                   className="bg-card rounded-2xl p-6 border border-border"
@@ -91,7 +91,7 @@ const AuthorPage = () => {
 
                 {/* Credentials */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                   className="bg-card rounded-2xl p-6 border border-border"
@@ -112,7 +112,7 @@ const AuthorPage = () => {
 
                 {/* Specialties */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 border border-primary/20"
@@ -135,7 +135,7 @@ const AuthorPage = () => {
 
               {/* Sidebar */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 1, x: 0 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
                 className="space-y-6"

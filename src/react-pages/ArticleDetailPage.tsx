@@ -60,7 +60,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Info */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 1, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               className="lg:col-span-2"
             >
@@ -104,7 +104,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
 
             {/* Score Card - PES Style */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 1, scale: 1 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
               className="bg-card rounded-3xl p-6 border border-border shadow-card"
@@ -122,7 +122,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
       <section className="py-8 bg-secondary/30">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             className="grid md:grid-cols-2 gap-8"
           >
@@ -178,7 +178,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
       <section className="py-12">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="bg-card rounded-3xl p-8 border border-border mb-8"
@@ -222,7 +222,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
           {/* Ingredients Lists */}
           <div className="grid md:grid-cols-3 gap-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="bg-card rounded-2xl p-6 border border-border"
@@ -242,7 +242,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="bg-card rounded-2xl p-6 border border-border"
@@ -261,7 +261,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="bg-card rounded-2xl p-6 border border-border"
@@ -294,7 +294,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
             {article.detailedAnalysis && (
               <>
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
                   className="bg-card rounded-2xl p-6 border border-border"
@@ -311,7 +311,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                   className="bg-card rounded-2xl p-6 border border-border"
@@ -328,7 +328,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   className="bg-card rounded-2xl p-6 border border-border"
@@ -345,7 +345,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                   className="bg-card rounded-2xl p-6 border border-border"
@@ -371,7 +371,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 1, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 }}
               className="bg-rating-excellent/5 rounded-3xl p-8 border border-rating-excellent/20"
@@ -386,7 +386,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
                 {article.pros.map((pro, i) => (
                   <motion.li 
                     key={i} 
-                    initial={{ opacity: 0, x: -10 }}
+                    initial={{ opacity: 1, x: 0 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-start gap-3"
@@ -399,7 +399,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 1, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 }}
               className="bg-destructive/5 rounded-3xl p-8 border border-destructive/20"
@@ -414,7 +414,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
                 {article.cons.map((con, i) => (
                   <motion.li 
                     key={i} 
-                    initial={{ opacity: 0, x: 10 }}
+                    initial={{ opacity: 1, x: 0 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-start gap-3"
@@ -434,7 +434,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="bg-card rounded-2xl p-6 border border-border"
@@ -454,7 +454,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="bg-card rounded-2xl p-6 border border-border"
@@ -480,7 +480,7 @@ const ArticleDetailPage = ({ article, brand }: ArticleDetailPageProps) => {
       <section className="py-12">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 rounded-3xl p-8 md:p-12 border border-primary/20 relative overflow-hidden"

@@ -1,5 +1,12 @@
-import { useEffect } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { useEffect, useState } from "react";
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  ResponsiveContainer
+} from "recharts";
 
 interface RadarChartProps {
   scores: {
@@ -12,44 +19,40 @@ interface RadarChartProps {
 }
 
 export function ArticleRadarChart({ scores }: RadarChartProps) {
-  const data = [
-    { subject: 'Ingredientes', value: scores.ingredients, fullMark: 5 },
-    { subject: 'Nutrición', value: scores.nutrition, fullMark: 5 },
-    { subject: 'Palatabilidad', value: scores.palatability, fullMark: 5 },
-    { subject: 'Calidad/Precio', value: scores.priceQuality, fullMark: 5 },
-    { subject: 'Global', value: scores.overall, fullMark: 5 },
-  ];
+  const [mounted, setMounted] = useState(false);
 
-  // ÚNICA LÓGICA NUEVA: forzar a Recharts a recalcular el tamaño al montarse
+  // Solución definitiva: esperar a que el layout esté estable
   useEffect(() => {
-    const triggerResize = () => {
-      window.dispatchEvent(new Event('resize'));
-    };
-
-    // pequeño delay para asegurarnos de que el layout ya está pintado
-    const timeoutId = setTimeout(triggerResize, 100);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    const timeout = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(timeout);
   }, []);
+
+  // Mientras no está montado, devolvemos un placeholder con altura
+  if (!mounted) {
+    return <div className="w-full min-h-[300px]" />;
+  }
+
+  const data = [
+    { subject: "Ingredientes", value: scores.ingredients, fullMark: 5 },
+    { subject: "Nutrición", value: scores.nutrition, fullMark: 5 },
+    { subject: "Palatabilidad", value: scores.palatability, fullMark: 5 },
+    { subject: "Calidad/Precio", value: scores.priceQuality, fullMark: 5 },
+    { subject: "Global", value: scores.overall, fullMark: 5 }
+  ];
 
   return (
     <div className="w-full min-h-[300px] relative">
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="75%" data={data}>
-          <PolarGrid 
-            stroke="hsl(var(--border))"
-            strokeDasharray="3 3"
-          />
-          <PolarAngleAxis 
+          <PolarGrid stroke="hsl(var(--border))" strokeDasharray="3 3" />
+          <PolarAngleAxis
             dataKey="subject"
-            tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
+            tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
           />
-          <PolarRadiusAxis 
+          <PolarRadiusAxis
             angle={90}
             domain={[0, 5]}
-            tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 10 }}
+            tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
             tickCount={6}
           />
           <Radar

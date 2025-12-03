@@ -24,11 +24,11 @@ const pageTitle = article
 
 <BaseLayout title={pageTitle}>
   {article ? (
-    <AppProviders client:load>
+    <AppProviders client:load client:idle>
       <ArticleDetailPage article={article} brand={brand} />
     </AppProviders>
   ) : (
-    <AppProviders client:load>
+    <AppProviders client:load client:idle>
       <NotFound path={Astro.url.pathname} />
     </AppProviders>
   )}

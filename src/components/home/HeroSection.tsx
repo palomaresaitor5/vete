@@ -12,11 +12,11 @@ export function HeroSection() {
       />
       
       {/* Decorative elements */}
-      <div className="absolute top-20 left-10 opacity-20 z-0 text-primary">
-        <PawPrint className="h-20 w-20 animate-float" />
+      <div className="absolute top-20 left-10 opacity-20 z-0">
+        <PawPrint className="h-20 w-20 text-primary-foreground animate-float" />
       </div>
-      <div className="absolute bottom-20 right-10 opacity-20 z-0 text-primary">
-        <PawPrint className="h-16 w-16 animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute bottom-20 right-10 opacity-20 z-0">
+        <PawPrint className="h-16 w-16 text-primary-foreground animate-float" style={{ animationDelay: "2s" }} />
       </div>
 
       <div className="container relative z-10 py-20 md:py-32">

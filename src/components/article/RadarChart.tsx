@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 interface RadarChartProps {
@@ -18,6 +19,20 @@ export function ArticleRadarChart({ scores }: RadarChartProps) {
     { subject: 'Calidad/Precio', value: scores.priceQuality, fullMark: 5 },
     { subject: 'Global', value: scores.overall, fullMark: 5 },
   ];
+
+  // ÚNICA LÓGICA NUEVA: forzar a Recharts a recalcular el tamaño al montarse
+  useEffect(() => {
+    const triggerResize = () => {
+      window.dispatchEvent(new Event('resize'));
+    };
+
+    // pequeño delay para asegurarnos de que el layout ya está pintado
+    const timeoutId = setTimeout(triggerResize, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   return (
     <div className="w-full min-h-[300px] relative">
